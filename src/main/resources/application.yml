@@ -1,0 +1,30 @@
+#数据源配置
+spring:
+  datasource:
+    name: mysql_test
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/hw?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+      username: root
+      password: root
+#      初始化连接数
+      initial-size: 1
+#      最长等待时间
+      max-wait: 60000
+  thymeleaf:
+#    模板不需要缓存
+    cache: false
+  mvc:
+    static-path-pattern: /static/**
+
+
+#  配置mybatis xml文件地址
+mybatis:
+#  配置别名
+  type-aliases-package: com.lfb.springboot.domain
+#  配置xml文件地址
+#  mapper-locations: classpath:/mapper/*.xml
+
+server:
+  port: 80
