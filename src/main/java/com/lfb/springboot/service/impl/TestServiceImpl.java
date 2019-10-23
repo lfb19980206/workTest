@@ -5,6 +5,7 @@ import com.lfb.springboot.mapper.TestMapper;
 import com.lfb.springboot.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -35,6 +36,7 @@ public class TestServiceImpl implements TestService {
     }
 
     @Override
+    @Transactional
     public void updateTest(Test test) {
         testMapper.updateTest(test);
     }

@@ -4,6 +4,7 @@ import com.lfb.springboot.domain.User;
 import com.lfb.springboot.mapper.UserMapper;
 import com.lfb.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 @Service("userServcie")
@@ -11,6 +12,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private RedisTemplate<Object,Object> redisTemplate;
 
     @Override
     public User login(User user) {
