@@ -509,7 +509,7 @@
               fileReader.onload = (function(file) {
                  return function(e) {
                     var text = textarea.val();
-                    textarea.val(text.substring(0, caretPos) + '\n<img src="'+ e.target.result  +'" />\n' + text.substring(caretPos) );
+                    textarea.val(text.substring(0, caretPos) + '\n<images src="'+ e.target.result  +'" />\n' + text.substring(caretPos) );
                  };
               })(file);
             fileReader.readAsDataURL(file);

@@ -43,5 +43,6 @@ public class UserController {
         }
         model.addAttribute("msg",msg);
         return "index";
+
     }
 }
